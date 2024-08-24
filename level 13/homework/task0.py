@@ -1,0 +1,26 @@
+# 3) მომხმარებელს შემოატანინეთ ასაკი და შეინახეთ ცვლადში. შემდეგ ეს ინფორმაცია გადააქციეთ მთელ რიცხად და დაუბეჭდეთ 5 წელში რამდენი წლის იქნება
+# 4) ჩამოწერეთ 20 ცვლადი და თითოეულში შეინახეთ string, integer ან float. შემდეგ თითოელზე გამოიყენეთ type ინსტრუქცია და დაბეჭდეთ ცვლადში რომელი მონაცემთა ტიპი ინახება
+
+age = int(input("wie alt bist du: "))
+print(age + 5)
+
+print(type(2))
+print(type(2))
+print(type(2))
+print(type(3))
+print(type(4))
+print(type(8))
+print(type("65"))
+print(type("71"))
+print(type("94"))
+print(type("11"))
+print(type(2.2))
+print(type(9.5))
+print(type(8.4))
+print(type(1.9))
+print(type(4.8))
+print(type(3.7))
+print(type(7.3))
+print(type(9.2))
+print(type(3.6))
+print(type(6.7))
