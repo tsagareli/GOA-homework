@@ -1,1 +1,0 @@
-# 0) Sololearn-ში შეასრულეთ The core web technology
