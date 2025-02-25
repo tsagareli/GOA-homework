@@ -1,0 +1,90 @@
+<!-- 2) თქვენი სიტყვებით ახსენით css რაში გამოიყენება
+3) ახსენით რა არის css-ის წესი, დეკლარაცია, კუთვნილება, მნიშვნელობა, selector, descendant selector, inheritance
+5) გამოიყენეთ შემდეგი კუთვნილებები ელემენტებზე - color, background-color, font-size, font-weight, text-align, border
+6) შექმენით დივ ბლოკი და მასში მოათავსეთ რამდენიმე ელემენტი. დივს გაუწერეთ თქვენთვის სასურველი დიზაინი -->
+
+<!-- 2 -->
+<!-- CSS გამოიყენება ვებ გვერდების ვიზუალური სტილის განსასაზღვრელად, როგორიცაა ფერები, შრიფტები, განლაგება და შიდა სტრუქტურა. ეს საშუალებას იძლევა ვებ გვერდების 
+ვიზუალური ვიზიტების კონტროლს HTML-ისგან განცალკევებით. -->
+
+<!-- 3 -->
+<!-- CSS წესი - სელექტორი და დეკლარაციათა შეყვანა.
+დეკლარაცია - კუთვნილება და მისი მნიშვნელობა (მაგ: color: red;).
+კუთვნილება - CSS მახასიათებელი (მაგ: color, font-size).
+მნიშვნელობა - კუთვნილების ველით ან ციფრით განსაზღვრული შედეგი (მაგ: red, 16px).
+Selector - ელემენტი, რომელსაც სტილი ეკუთვნის (მაგ: p, .class-name).
+Descendant Selector - შთამომავალი ელემენტი (მაგ: div p).
+Inheritance - მემკვიდრეობა, როცა შიდა ელემენტებს ჰპირდებათ სტილი (მაგ: body { color: red; }). -->
+
+<!-- 5 -->
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ელემენტები</title>
+    <style>
+        .example {
+            color: #ffffff; 
+            background-color: #4CAF50;
+            font-size: 20px; 
+            font-weight: bold; 
+            text-align: center; 
+            border: 2px solid #000000; 
+            padding: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="example">
+        ეს არის ტექსტი, რომელსაც გამოვიყენეთ სხვადასხვა კუთვნილებები.
+    </div>
+
+</body>
+</html>
+<!-- 6 -->
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>დივ ბლოკის დიზაინი</title>
+    <style>
+        .custom-div {
+            background-color: #f0f8ff; 
+            border: 2px solid #333333; 
+            padding: 20px; 
+            margin: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            text-align: center; 
+        }
+        h2 {
+            color: #4CAF50; 
+            font-size: 24px; 
+            font-weight: bold; 
+        }
+        p {
+            font-size: 16px; 
+            color: #333333; 
+            line-height: 1.5;
+        }
+        img {
+            width: 100%; 
+            max-width: 300px; 
+            border-radius: 8px; 
+            margin-top: 15px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="custom-div">
+        <h2>განსხვავებული დიზაინი</h2>
+        <p>ეს არის დივ ბლოკი, რომელშიც სხვადასხვა ელემენტი მოათავსეთ. ამ ბლოკში გამოყენებულია ფონდის ფერი, საზღვარი, შიდა და გარე შევსებები, ჩრდილი და მრგვალი კუთხეები.</p>
+        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+    </div>
+
+</body>
+</html>
