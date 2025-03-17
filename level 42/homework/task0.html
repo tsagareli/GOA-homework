@@ -1,0 +1,105 @@
+<!-- 2) Round the Corners of a Box – Use border-radius to create rounded corners on a <div>.
+3) Add Margins Around a Paragraph – Apply a margin to a <p> element to create space between it and surrounding elements.
+4) Create a Button with Padding and Border – Style a button with padding inside and a border around it.
+5) Make a Box with a Shadowed Border – Apply a border and a subtle box-shadow to a <div> for a lifted effect.
+6) Adjust Margin Between List Items – Add margin to <li> elements to space out items in an unordered list.
+7) Use Negative Margins – Experiment with negative margins to move an element closer to another or overlap elements.
+8) თქვენი სიტყვებით ახსენით რა არის flexbox და როდის ვიყენებთ მას
+9) გააკეთეთ ნახაზი და ახსენით როგორ მუშაობს შემდეგი კუთვნილებები: display, justify-content, align-items -->
+
+<!-- 2 -->
+<div class="rounded-box">
+    This is a box with rounded corners.
+  </div>
+  
+  <style>
+    .rounded-box {
+      width: 200px;
+      height: 100px;
+      background-color: #3498db;
+      border-radius: 15px; 
+    }
+  </style>
+
+<!-- 3 -->
+<p class="spaced-paragraph">
+    This paragraph has a margin around it.
+  </p>
+  
+  <style>
+    .spaced-paragraph {
+      margin: 20px; 
+    }
+  </style>
+
+<!-- 4 -->
+<button class="styled-button">
+    Click Me
+  </button>
+  
+  <style>
+    .styled-button {
+      padding: 10px 20px; 
+      border: 2px solid #3498db; 
+      background-color: #ffffff;
+      color: #3498db;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .styled-button:hover {
+      background-color: #3498db;
+      color: white;
+    }
+  </style>
+
+<!-- 5 -->
+<div class="shadow-box">
+    This is a box with a shadowed border.
+  </div>
+  
+  <style>
+    .shadow-box {
+      width: 300px;
+      height: 150px;
+      background-color: #f1f1f1;
+      border: 2px solid #ccc;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); 
+    }
+  </style>
+
+<!-- 6 -->
+<ul>
+    <li class="spaced-item">Item 1</li>
+    <li class="spaced-item">Item 2</li>
+    <li class="spaced-item">Item 3</li>
+  </ul>
+  
+  <style>
+    .spaced-item {
+      margin-bottom: 10px; 
+    }
+  </style>
+
+<!-- 7 -->
+<div class="box1">Box 1</div>
+<div class="box2">Box 2</div>
+
+<style>
+  .box1 {
+    width: 200px;
+    height: 100px;
+    background-color: #3498db;
+    margin-bottom: -20px; 
+  }
+  .box2 {
+    width: 200px;
+    height: 100px;
+    background-color: #e74c3c;
+  }
+</style>
+
+<!-- 8 -->
+<!-- Flexbox არის CSS-ტექნოლოგია, რომელიც ამარტივებს ელემენტების განლაგებას ერთ კონტეინერში. იგი საშუალებას აძლევს ელემენტებს ავტომატურად მოერგონ სივრცეს, განლაგდნენ ჰორიზონტალურად ან ვერტიკალურად, და ჰქონდეთ თანაბარი სივრცე მათ შორის. იყენებენ მას, როდესაც საჭიროა ელემენტების მოქნილი განლაგება და ადაპტირება სხვადასხვა ეკრანის ზომებზე. -->
+
+<!-- 9 -->
+<!-- display: განსაზღვრავს ელემენტების განლაგების ტიპს. display: flex აქცევს კონტეინერს Flexbox კონტეინერად.justify-content: მართავს ელემენტების განლაგებას ჰორიზონტალურად. მაგალითად:flex-start: იწყება კონტეინერის დასაწყისში.center: ცენტრში.space-between: ელემენტები თანაბრად განლაგებულია.align-items: მართავს ელემენტების განლაგებას ვერტიკალურად. მაგალითად:flex-start: დასაწყისში.center: ცენტრში.stretch: ელემენტები გადაჭიმულია. -->

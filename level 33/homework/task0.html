@@ -1,0 +1,81 @@
+<!-- 2) თქვენი სიტყვებით ახსენით რა არის  id და class ატრიბუტები, როდის რომლის გამოყენება ჯობია -->
+<!-- 3) თქვენი სიტყვებით ახსენით რა არის rgb, მოიყვანეთ მინიმუმ  5 ფერის მაგალითი rgb სისტემიდან -->
+<!-- 4)Create a webpage with the following elements:
+A header with an id of "site-title".
+A navigation bar (nav tag) with several links, each with a class of "nav-link".
+A main content section containing a few paragraphs, with one paragraph having a class of "highlight".
+A footer with an id of "site-footer".
+Style the webpage using external CSS:
+Use an id selector to center the text and change the background color of the header and footer.
+Use a class selector to change the color of the navigation links.
+Apply different font sizes to the paragraphs, and give the paragraph with the highlight class a different background color.  -->
+<!-- 5)Create a webpage with the following elements:
+A div with an id of "color-box".
+Three paragraphs, each with a class of "color-text".
+Style the webpage using CSS:
+Use the id selector to style the div with a background color using an RGB value (e.g., rgb(200, 150, 255)).
+Use the class selector to style the text color of each paragraph with different RGB values (e.g., rgb(255, 100, 100), rgb(100, 255, 100), rgb(100, 100, 255)).
+Set the font size and padding for the div and paragraphs. -->
+
+
+<!-- 2 -->
+<!-- id - გამოიყენება ელემენტის უნიკალურად დასასახელებლად. თითო დოკუმენტში მხოლოდ ერთი ელემენტს შეუძლია ჰქონდეს ერთი id. გამოიყენეთ, როცა კონკრეტულ ელემენტს უნდა მიამართოთ.class - გამოიყენება რამდენიმე ელემენტის დასასახელებლად, რომლებიც უნდა ჰქონდეთ ერთნაირი სტილი ან მოქმედება. ერთ class-ს შეუძლია ჰქონდეს მრავალი ელემენტი.როდის გამოიყენოთ:id: როცა კონკრეტული ელემენტია საჭირო.class: როცა იგივე სტილი ან ფუნქცია უნდა ჰქონდეს რამდენიმე ელემენტს. -->
+
+<!-- 3 -->
+<!-- RGB არის ფერის სისტემა, სადაც ფერები შედგება სამი კომპონენტიდან: წითელი (Red), მწვანე (Green) და ლურჯი (Blue). თითოეული კომპონენტი შეიძლება იყოს 0-255 დიაპაზონში. ამ ფერების შერწყმით მიიღება სხვადასხვა ფერები.
+RGB ფერის მაგალითები:
+წითელი: rgb(255, 0, 0)
+მწვანე: rgb(0, 255, 0)
+ლურჯი: rgb(0, 0, 255)
+თეთრი: rgb(255, 255, 255)
+შავი: rgb(0, 0, 0) -->
+
+<!-- 4 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="site-title">
+        <h1>Welcome to My Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">About</a></li>
+            <li><a href="#" class="nav-link">Services</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>This is a paragraph in the main content section.</p>
+        <p class="highlight">This is a highlighted paragraph with a different background color.</p>
+        <p>This is another paragraph with a different font size.</p>
+    </main>
+    <footer id="site-footer">
+        <p>&copy; 2025 My Website</p>
+    </footer>
+</body>
+</html>
+
+<!-- 5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Box Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="color-box">
+        <p class="color-text">This is the first paragraph with a red color.</p>
+        <p class="color-text">This is the second paragraph with a green color.</p>
+        <p class="color-text">This is the third paragraph with a blue color.</p>
+    </div>
+</body>
+</html>

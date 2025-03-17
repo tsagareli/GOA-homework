@@ -1,0 +1,115 @@
+<!-- 2) Style the Input Fields – Add a border and background color to input fields to make them more visually appealing.
+3) Customize the Submit Button – Style the submit button with a custom color, rounded corners, and a hover effect.
+4) Add Focus Effects – Change the border color and background of input fields when they are focused to improve user experience.
+5) Style Error Messages – Design error messages with red text, a small icon, and appropriate spacing to make form validation clearer.
+6) Create a Box with a Border – Add a solid border to a <div> and customize its color, width, and style.
+7) Round the Corners of a Box – Use border-radius to create rounded corners on a <div>.
+8) Make a Box with a Shadowed Border – Apply a border and a subtle box-shadow to a <div> for a lifted effect. -->
+
+<!-- 2 -->
+<input type="text" class="styled-input" placeholder="Enter text">
+
+<style>
+  .styled-input {
+    border: 2px solid #3498db; /* Border color */
+    background-color: #f1f1f1; /* Background color */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px; /* Rounded corners */
+  }
+</style>
+
+<!-- 3 -->
+<button type="submit" class="styled-submit">Submit</button>
+
+<style>
+  .styled-submit {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .styled-submit:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+  }
+</style>
+
+<!-- 4 -->
+<input type="text" class="focused-input" placeholder="Enter text">
+
+<style>
+  .focused-input {
+    border: 2px solid #3498db;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+
+  .focused-input:focus {
+    border-color: #2ecc71; /* Green border on focus */
+    background-color: #e8f9e1; /* Light green background */
+    outline: none; /* Remove default focus outline */
+  }
+</style>
+
+<!-- 5 -->
+<div class="error-message">
+  <span class="error-icon">❌</span> Please enter a valid email address.
+</div>
+
+<style>
+  .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .error-icon {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+</style>
+
+<!-- 6 -->
+<div class="bordered-box">This is a box with a border.</div>
+
+<style>
+  .bordered-box {
+    border: 3px solid #3498db; /* Solid blue border */
+    padding: 20px;
+    width: 300px;
+    height: 150px;
+  }
+</style>
+
+<!-- 7 -->
+<div class="rounded-box">This box has rounded corners.</div>
+
+<style>
+  .rounded-box {
+    border: 2px solid #3498db;
+    padding: 20px;
+    width: 300px;
+    height: 150px;
+    border-radius: 15px; /* Rounded corners */
+  }
+</style>
+
+<!-- 8 -->
+<div class="shadowed-box">This box has a shadowed border.</div>
+
+<style>
+  .shadowed-box {
+    border: 2px solid #3498db;
+    padding: 20px;
+    width: 300px;
+    height: 150px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+</style>
