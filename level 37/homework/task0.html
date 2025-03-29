@@ -1,0 +1,73 @@
+<!-- 2) Underline Text: Apply an underline to all paragraph text.
+3) Remove Underline: Remove the underline from all anchor tags (<a>).
+4) Overline Text: Add an overline decoration to all <h1> elements.
+5) Line Through Text: Strike through the text inside <span> elements.
+6) Combined Decorations: Apply both underline and overline to all <h2> elements.
+7) Dashed Underline: Create a dashed underline effect for all <a> tags.
+8) Wavy Line: Use a wavy text decoration for a warning message <p class="warning">.
+9) Case Styling for Navigation Menus: Use text-transform to style navigation links with uppercase text
+10) Basic Shadow: Apply a shadow to headings for a slight lifted effect. -->
+
+<!-- 2 -->
+<style>
+    p {
+        text-decoration: underline;
+    }
+</style>
+
+<!-- 3 -->
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
+
+<!-- 4 -->
+<style>
+    h1 {
+        text-decoration: overline;
+    }
+</style>
+
+<!-- 5 -->
+<style>
+    span {
+        text-decoration: line-through;
+    }
+</style>
+
+<!-- 6 -->
+<style>
+    h2 {
+        text-decoration: underline overline;
+    }
+</style>
+
+<!-- 7 -->
+<style>
+    a {
+        text-decoration: underline;
+        text-decoration-style: dashed;
+    }
+</style>
+
+<!-- 8 -->
+<style>
+    .warning {
+        text-decoration: underline wavy red;
+    }
+</style>
+
+<!-- 9 -->
+<style>
+    nav a {
+        text-transform: uppercase;
+    }
+</style>
+
+<!-- 10 -->
+<style>
+    h1, h2, h3 {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+</style>
