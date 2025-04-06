@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Transformation</title>
+    <style>
+        .my-div {
+            width: 500px;
+            height: 500px;
+            background-color: green; 
+            transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; 
+        }
+
+        .my-div:hover {
+            transform: rotate(45deg);
+            width: 1000px; 
+            height: 1000px; 
+        }
+
+        .my-div:active {
+            transform: translate(-50px, -100px); 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="my-div"></div>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Event Example</title>
+    <style>
+        .my-div {
+            font-size: 20px;  
+            color: white;  
+            background-color: black;  
+            padding: 20px;
+            transition: font-size 1s ease, color 2s ease, background-color 2s ease; 
+        }
+
+        .my-div:active {
+            font-size: 25px;  
+            color: black;  
+            background-color: white; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="my-div">Click me!</div>
+
+</body>
+</html>

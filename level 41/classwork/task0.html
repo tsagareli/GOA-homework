@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordered List Example</title>
+    <style>
+        .georgian {
+            list-style-type: georgian;
+            list-style-position: inside;
+        }
+
+        .lower-roman {
+            list-style-type: lower-roman;
+            list-style-position: outside;
+        }
+
+        .lower-greek {
+            list-style-type: lower-greek;
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="georgian">
+        <li>georgian - inside</li>
+        <ul class="lower-roman">
+            <li>lower-roman - outside</li>
+        </ul>
+        <ul class="lower-greek">
+            <li>lower-greek - inside</li>
+        </ul>
+    </ul>
+
+</body>
+</html>
+
