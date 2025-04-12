@@ -1,0 +1,211 @@
+<!-- 🔁 **Keyframes & Animation Basics**
+1. **Create a simple animation using `@keyframes` that moves a box from left to right.**
+2. **Define an animation using `@keyframes` that changes the background color from blue to red over 5 seconds.**
+3. **Create a CSS animation that rotates an element 360 degrees.**
+4. **Design a pulse effect using keyframes where an element scales up and down.**
+
+🔄 **animation-iteration-count**
+5. **Animate a bouncing ball that repeats exactly 3 times.**
+6. **Set up an infinite animation of a loading spinner.**
+7. **Create an animation that runs only once and then stops.**
+8. **Use a class toggle to switch between an animation that loops and one that doesn't.**
+
+⏳ **Duration & Delay**
+9. **Set an animation to start 2 seconds after the page loads.**
+10. **Create a sequence of three elements animating one after another using different `animation-delay` values.**
+11. **Make a fading effect that lasts for exactly 10 seconds.** -->
+
+<!-- 1 -->
+<div class="box"></div>
+
+<style>
+@keyframes moveRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200px); }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  animation: moveRight 2s ease;
+}
+</style>
+
+<!-- 2 -->
+<div class="color-box"></div>
+
+<style>
+@keyframes colorChange {
+  from { background-color: blue; }
+  to { background-color: red; }
+}
+
+.color-box {
+  width: 100px;
+  height: 100px;
+  animation: colorChange 5s forwards;
+}
+</style>
+
+<!-- 3 -->
+<div class="spinner"></div>
+
+<style>
+@keyframes rotate360 {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  background: gold;
+  animation: rotate360 2s linear;
+}
+</style>
+
+<!-- 4 -->
+<div class="pulse"></div>
+
+<style>
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.pulse {
+  width: 100px;
+  height: 100px;
+  background: pink;
+  animation: pulse 1s ease-in-out infinite;
+}
+</style>
+
+<!-- 5 -->
+<div class="ball"></div>
+
+<style>
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-100px); }
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background: crimson;
+  border-radius: 50%;
+  animation: bounce 1s ease-in-out 3;
+}
+</style>
+
+<!-- 6 -->
+<div class="loader"></div>
+
+<style>
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid lightgray;
+  border-top: 4px solid steelblue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+</style>
+
+<!-- 7 -->
+<div class="fade-once">Hello</div>
+
+<style>
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-once {
+  animation: fadeOut 3s forwards;
+}
+</style>
+
+<!-- 8 -->
+<button onclick="toggleAnimation()">Toggle Animation</button>
+<div id="wiggler" class="looping">🎉</div>
+
+<style>
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+}
+
+.looping {
+  animation: wiggle 1s infinite;
+}
+
+.one-time {
+  animation: wiggle 1s 1;
+}
+</style>
+
+<script>
+function toggleAnimation() {
+  const el = document.getElementById("wiggler");
+  el.classList.toggle("looping");
+  el.classList.toggle("one-time");
+}
+</script>
+
+<!-- 9 -->
+<div class="delayed">I'm late!</div>
+
+<style>
+@keyframes slideIn {
+  from { transform: translateX(-200px); }
+  to { transform: translateX(0); }
+}
+
+.delayed {
+  animation: slideIn 1s ease 2s forwards;
+}
+</style>
+
+<!-- 10 -->
+<div class="seq1">1</div>
+<div class="seq2">2</div>
+<div class="seq3">3</div>
+
+<style>
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.seq1, .seq2, .seq3 {
+  display: inline-block;
+  margin: 10px;
+  font-size: 24px;
+  animation: popIn 1s ease forwards;
+}
+
+.seq1 { animation-delay: 0s; }
+.seq2 { animation-delay: 0.5s; }
+.seq3 { animation-delay: 1s; }
+</style>
+
+<!-- 11 -->
+<div class="fader">Goodbye in 10s</div>
+
+<style>
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fader {
+  animation: fadeInOut 10s ease-in-out;
+}
+</style>
