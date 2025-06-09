@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>საკლასო ფორმა</title>
+</head>
+<body>
+
+  <form id="myForm" onsubmit="handleForm(event)">
+    <input type="text" name="name" placeholder="სახელი"><br><br>
+    <input type="text" name="surname" placeholder="გვარი"><br><br>
+    <input type="email" name="email" placeholder="ელ. ფოსტა"><br><br>
+    <input type="number" name="age" placeholder="ასაკი"><br><br>
+
+    <button type="submit">დადასტურება</button>
+  </form>
+
+  <script>
+    function handleForm(event) {
+      event.preventDefault(); 
+
+      var form = document.getElementById("myForm");
+
+      var name = form.elements["name"].value;
+      var surname = form.elements["surname"].value;
+      var email = form.elements["email"].value;
+      var age = form.elements["age"].value;
+
+      console.log("სახელი:", name);
+      console.log("გვარი:", surname);
+      console.log("ელ. ფოსტა:", email);
+      console.log("ასაკი:", age);
+
+      form.reset();
+    }
+  </script>
+
+</body>
+</html>
+

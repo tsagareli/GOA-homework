@@ -1,0 +1,122 @@
+<!-- 2-6)
+
+Check if Two Numbers Are Equal
+Declare two numbers and use == to check if they’re equal. Print the result.
+
+Check if a Number is Greater Than Another Number
+Declare two numbers and use > to check if the first is greater than the second. Print the result.
+
+Check if a Number is Less Than or Equal to Another Number
+Declare two numbers and use <= to compare them. Print the result.
+
+Check if Two Numbers Are Not Equal
+Declare two numbers and use != to check if they’re not equal. Print the result.
+
+Check if a Number is Greater Than or Equal to 100
+Declare a number and use >= to check if it’s at least 100. Print the result.
+
+7-9)
+
+Show a confirm box asking a question. The result (true or false) is logged to the console.
+
+Show a confirm box when a button is clicked. Store the result in a variable.
+
+Display a confirm box on page load. Immediately show the result in an alert.
+
+10-12)
+
+On form submit, log the value of the input with name="username" to the console.
+
+On a button click, clear the value of the input with name="email".
+
+On a button click, alert the value of the input with name="phone". -->
+
+
+<script>
+  // 2. Equal (==)
+  const a = 10;
+  const b = 10;
+  console.log("Equal:", a == b); // true
+
+  // 3. Greater than (>)
+  const c = 15;
+  const d = 10;
+  console.log("Greater:", c > d); // true
+
+  // 4. Less than or equal to (<=)
+  const e = 5;
+  const f = 8;
+  console.log("Less or Equal:", e <= f); // true
+
+  // 5. Not equal (!=)
+  const g = 7;
+  const h = 10;
+  console.log("Not Equal:", g != h); // true
+
+  // 6. Greater than or equal to 100
+  const i = 105;
+  console.log("At least 100:", i >= 100); // true
+</script>
+
+
+<!-- 7. Confirm on page load -->
+<script>
+  const confirmResult = confirm("Do you like JavaScript?");
+  console.log("User clicked:", confirmResult); // true or false
+</script>
+
+<!-- 8. Confirm on button click -->
+<button onclick="askConfirm()">Click me for confirm</button>
+
+<script>
+  function askConfirm() {
+    const result = confirm("Are you sure?");
+    console.log("Confirm result:", result);
+  }
+</script>
+
+<!-- 9. Confirm on page load, then alert -->
+<script>
+  const confirmNow = confirm("Show alert with confirm result?");
+  alert("Result: " + confirmNow); // alert with true/false
+</script>
+
+
+<!-- 10. Log username on form submit -->
+<form onsubmit="logUsername(event)">
+  <input type="text" name="username" placeholder="Username">
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  function logUsername(event) {
+    event.preventDefault();
+    const username = document.querySelector('[name="username"]').value;
+    console.log("Username:", username);
+  }
+</script>
+
+<br>
+
+<!-- 11. Clear email input -->
+<input type="email" name="email" placeholder="Email">
+<button onclick="clearEmail()">Clear Email</button>
+
+<script>
+  function clearEmail() {
+    document.querySelector('[name="email"]').value = "";
+  }
+</script>
+
+<br>
+
+<!-- 12. Alert phone number -->
+<input type="text" name="phone" placeholder="Phone number">
+<button onclick="showPhone()">Show Phone</button>
+
+<script>
+  function showPhone() {
+    const phone = document.querySelector('[name="phone"]').value;
+    alert("Phone: " + phone);
+  }
+</script>

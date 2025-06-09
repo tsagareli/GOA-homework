@@ -1,0 +1,138 @@
+<!-- დავალება 1
+შექმენი ფორმა ორი <input> ტიპით:
+ერთი type=number,
+მეორე type=text.
+დააყენე ღილაკი.
+როცა ღილაკს დააწვება მომხმარებელი, ტექსტი h2-ში უნდა იყოს ასე:
+"თქვენი ასაკია 25 და საყვარელი ფრაზაა: Live and Learn"
+
+დავალება 2
+შექმენი <input type="range"> (0-100).
+როცა გადაადგილებს მომხმარებელი, მეზობელ <span>-ში ხედავდეს live მნიშვნელობას.
+მაგალითად: "Current value: 45"
+
+დავალება 3
+შეიყვანოს მომხმარებელმა თავისი სახელი <input type="text">-ში და აირჩიოს emoji <input type="text">-ში.
+ღილაკზე დაჭერის შემდეგ, h1 გახდეს:
+"გთხოვთ, მიესალმეთ: 🤩 გიორგი!"
+
+ დავალება 4
+შექმენი textarea, სადაც მომხმარებელი წერს შეტყობინებას.
+ღილაკზე დაჭერით, ეს ტექსტი გამოჩნდეს <p> ტეგში და ამავე დროს, ფონზე ფერი იცვლებოდეს (მაგ. lightyellow).
+
+დავალება 5
+შეიყვანოს მომხმარებელმა ორი რიცხვი.
+ღილაკზე დაჭერის შემდეგ, h2-ში გამოჩნდეს მათი ჯამი.
+მაგ: "ჯამი: 42"
+
+დავალება 6
+შექმენი ფორმა ერთ type=text ინფუთით და ღილაკით.
+როცა ღილაკს დააჭერს, დათვალე რამდენი სიმბოლო შეიყვანა და გამოაჩინე p ტეგში
+
+ დავალება 7
+შეიყვანოს მომხმარებელმა თავისი საყვარელი ფერი ტექსტის სახით (red, blue, green...).
+როცა ღილაკზე დააჭერს, მთელ გვერდზე (body) ფონი გახდეს ეს ფერი -->
+
+
+<!-- 1 -->
+<h3>დავალება 1</h3>
+<input type="number" id="ageInput" placeholder="შეიყვანე ასაკი">
+<input type="text" id="phraseInput" placeholder="შეიყვანე საყვარელი ფრაზა">
+<button onclick="showAgeAndPhrase()">დამადასტურე</button>
+<h2 id="result1"></h2>
+
+<script>
+  function showAgeAndPhrase() {
+    const age = document.getElementById("ageInput").value;
+    const phrase = document.getElementById("phraseInput").value;
+    document.getElementById("result1").textContent = `თქვენი ასაკია ${age} და საყვარელი ფრაზაა: ${phrase}`;
+  }
+</script>
+
+
+<!-- 2 -->
+<h3>დავალება 2</h3>
+<input type="range" min="0" max="100" id="rangeInput" oninput="updateRangeValue()">
+<span id="rangeValue">Current value: 0</span>
+
+<script>
+  function updateRangeValue() {
+    const value = document.getElementById("rangeInput").value;
+    document.getElementById("rangeValue").textContent = `Current value: ${value}`;
+  }
+</script>
+
+
+<!-- 3 -->
+<h3>დავალება 3</h3>
+<input type="text" id="nameInput" placeholder="შეიყვანე სახელი">
+<input type="text" id="emojiInput" placeholder="შეიყვანე emoji">
+<button onclick="greetUser()">მოგესალმებით</button>
+<h1 id="result3"></h1>
+
+<script>
+  function greetUser() {
+    const name = document.getElementById("nameInput").value;
+    const emoji = document.getElementById("emojiInput").value;
+    document.getElementById("result3").textContent = `გთხოვთ, მიესალმეთ: ${emoji} ${name}!`;
+  }
+</script>
+
+
+<!-- 4 -->
+<h3>დავალება 4</h3>
+<textarea id="messageInput" placeholder="შეიყვანე შეტყობინება"></textarea><br>
+<button onclick="showMessage()">გაგზავნა</button>
+<p id="messageOutput4"></p>
+
+<script>
+  function showMessage() {
+    const text = document.getElementById("messageInput").value;
+    document.getElementById("messageOutput4").textContent = text;
+    document.body.style.backgroundColor = "lightyellow";
+  }
+</script>
+
+
+<!-- 5 -->
+<h3>დავალება 5</h3>
+<input type="number" id="num1" placeholder="პირველი რიცხვი">
+<input type="number" id="num2" placeholder="მეორე რიცხვი">
+<button onclick="calculateSum()">გამოთვალე</button>
+<h2 id="sumResult"></h2>
+
+<script>
+  function calculateSum() {
+    const a = parseFloat(document.getElementById("num1").value);
+    const b = parseFloat(document.getElementById("num2").value);
+    const sum = a + b;
+    document.getElementById("sumResult").textContent = `ჯამი: ${sum}`;
+  }
+</script>
+
+
+<!-- 6 -->
+<h3>დავალება 6</h3>
+<input type="text" id="textInput6" placeholder="შეიყვანე ტექსტი">
+<button onclick="countCharacters()">დათვალე სიმბოლოები</button>
+<p id="charCount"></p>
+
+<script>
+  function countCharacters() {
+    const text = document.getElementById("textInput6").value;
+    document.getElementById("charCount").textContent = `სიმბოლოების რაოდენობა: ${text.length}`;
+  }
+</script>
+
+
+<!-- 7 -->
+<h3>დავალება 7</h3>
+<input type="text" id="colorInput" placeholder="მაგ: red, blue, green">
+<button onclick="changeBackgroundColor()">შეცვალე ფონი</button>
+
+<script>
+  function changeBackgroundColor() {
+    const color = document.getElementById("colorInput").value;
+    document.body.style.backgroundColor = color;
+  }
+</script>

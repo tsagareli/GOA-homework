@@ -1,0 +1,115 @@
+<!-- 2-5)
+
+Prompt the user for their favorite hobby and display it in an alert.
+
+Ask the user for their first and last name (two prompts), then concatenate and display the full name in an alert.
+
+Prompt the user for a message and update the text content of a <p> element on the page with it.
+
+Prompt the user for their favorite emoji and display it in an alert along with a thank you message.
+
+Prompt the user to enter a word and use document.title to set the page’s title to that word.(
+6-8)
+Create a form with a text input and a button. When the button is clicked, take the value from the text input and display it in an alert.
+
+Make a form with a color input and a submit button. When submitted, set the page’s background color to the selected color.
+
+Build a form with two text inputs (like "first name" and "last name") and a button. On button click, combine the values and display the full name inside an <h1> element on the page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Prompts</title>
+</head>
+<body>
+  <p id="messageOutput">Message will appear here...</p>
+
+  <script>
+    // 2. Prompt for favorite hobby and alert
+    const hobby = prompt("What is your favorite hobby?");
+    alert("Your favorite hobby is: " + hobby);
+
+    // 3. Ask for first and last name
+    const firstName = prompt("Enter your first name:");
+    const lastName = prompt("Enter your last name:");
+    const fullName = firstName + " " + lastName;
+    alert("Your full name is: " + fullName);
+
+    // 4. Prompt for message and update <p> element
+    const message = prompt("Enter a message to display:");
+    document.getElementById("messageOutput").textContent = message;
+
+    // 5. Prompt for emoji and show alert with thank you
+    const emoji = prompt("What's your favorite emoji?");
+    alert("Thanks! Your favorite emoji is: " + emoji);
+
+    // 6. Prompt for a word and set it as document title
+    const titleWord = prompt("Enter a word for the page title:");
+    document.title = titleWord;
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms & Events</title>
+</head>
+<body>
+
+  <!-- 6. Text input and alert -->
+  <h3>Text to Alert</h3>
+  <form onsubmit="showAlert(event)">
+    <input type="text" id="alertInput" placeholder="Type something">
+    <button type="submit">Show Alert</button>
+  </form>
+
+  <br>
+
+  <!-- 7. Color input and background color -->
+  <h3>Choose Background Color</h3>
+  <form onsubmit="changeBgColor(event)">
+    <input type="color" id="bgColor">
+    <button type="submit">Change Color</button>
+  </form>
+
+  <br>
+
+  <!-- 8. Combine names and show in <h1> -->
+  <h3>Full Name Display</h3>
+  <form onsubmit="displayFullName(event)">
+    <input type="text" id="firstName" placeholder="First Name">
+    <input type="text" id="lastName" placeholder="Last Name">
+    <button type="submit">Show Full Name</button>
+  </form>
+  <h1 id="fullNameOutput">Your full name will appear here.</h1>
+
+  <script>
+    // 6
+    function showAlert(event) {
+      event.preventDefault();
+      const text = document.getElementById("alertInput").value;
+      alert("You typed: " + text);
+    }
+
+    // 7
+    function changeBgColor(event) {
+      event.preventDefault();
+      const color = document.getElementById("bgColor").value;
+      document.body.style.backgroundColor = color;
+    }
+
+    // 8
+    function displayFullName(event) {
+      event.preventDefault();
+      const first = document.getElementById("firstName").value;
+      const last = document.getElementById("lastName").value;
+      document.getElementById("fullNameOutput").textContent = first + " " + last;
+    }
+  </script>
+</body>
+</html>

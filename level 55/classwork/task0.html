@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ფორმის მაგალითი</title>
+</head>
+<body>
+
+  <h1 id="result">ჩაწერე ტექსტი და აირჩიე ფერი</h1>
+
+  <form id="myForm">
+    <label for="colorInput">აირჩიე ფერი:</label>
+    <input type="color" id="colorInput" name="color"><br><br>
+
+    <label for="textInput">შეიყვანე ტექსტი:</label>
+    <input type="text" id="textInput" name="text"><br><br>
+
+    <button type="submit">გაგზავნა</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('myForm');
+    const h1 = document.getElementById('result');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      const color = document.getElementById('colorInput').value;
+      const text = document.getElementById('textInput').value;
+
+      h1.textContent = text;
+      h1.style.color = color;
+    });
+  </script>
+
+</body>
+</html>
+
+
+<!-- 1) რა არის DOM: -->
+<!-- DOM არის HTML-ის სტრუქტურა, რომელსაც JS იყენებს ელემენტების წასაკითხად და შესაცვლელად. -->
+
+<!-- 2) რა არის .getElementById:
+ეს მეთოდი გვაძლევს წვდომას იმ HTML ელემენტზე, რომელსაც აქვს კონკრეტული id.
+მაგ: document.getElementById("title") ნიშნავს – მოიძებნოს ელემენტი, რომელსაც აქვს id="title". -->
+
